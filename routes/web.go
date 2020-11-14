@@ -9,7 +9,7 @@ import (
 func InitRoutes() *httprouter.Router {
 	r := httprouter.New()
 	r.POST("/user/register", service.Register)
-	r.POST("/user/login", service.Login)
+	r.GET("/user/login", service.Login)
 	r.GET("/task", service.ShowAllTasks)
 	r.POST("/task", service.AddTask)
 	r.GET("/task/:id", service.ShowSingleTask)
